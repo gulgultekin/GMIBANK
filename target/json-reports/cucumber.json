@@ -3,20 +3,60 @@
     "line": 2,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 674500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 20800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
         "line": 3,
         "name": "User go to Gmibank Home Page",
         "description": "",
         "id": "go-to-home-page;user-go-to-gmibank-home-page",
+        "after": [
+          {
+            "result": {
+              "duration": 23700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 14598371200,
+              "status": "passed"
             },
             "line": 4,
             "name": "user go to \"https://www.gmibank.com/\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.gmibank.com/\"",
+                  "offset": 11
+                }
+              ],
+              "location": "HomePage.user_go_to(String)"
+            },
             "keyword": "Given "
           }
         ],

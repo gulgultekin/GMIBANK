@@ -15,7 +15,7 @@ import java.net.HttpURLConnection;
                 "junit:target/xml-report/cucumber.xml"
         },
        features = "src/test/resources/features",
-        glue = "gmibank/step_defs",
+        glue = "com/gmibank/stepDefinitions",
         tags = "@HomePage",
         dryRun = false
 

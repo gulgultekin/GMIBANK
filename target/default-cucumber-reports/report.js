@@ -19,12 +19,23 @@ formatter.scenario({
     }
   ]
 });
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "user go to \"https://www.gmibank.com/\"",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "HomePage.user_go_to(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
 });
 });
