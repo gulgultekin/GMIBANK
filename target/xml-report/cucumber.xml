@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0.006405">
+<testcase classname="Go to Home Page" name="User go to Gmibank Home Page" time="0.006405">
+<skipped><![CDATA[Given user go to "https://www.gmibank.com/".................................undefined
+]]></skipped>
+</testcase>
+</testsuite>

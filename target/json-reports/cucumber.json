@@ -1,0 +1,46 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User go to Gmibank Home Page",
+        "description": "",
+        "id": "go-to-home-page;user-go-to-gmibank-home-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user go to \"https://www.gmibank.com/\"",
+            "match": {},
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@HomePage"
+          }
+        ]
+      }
+    ],
+    "name": "Go to Home Page",
+    "description": "",
+    "id": "go-to-home-page",
+    "keyword": "Feature",
+    "uri": "src\\test\\resources\\features\\homePage.feature",
+    "tags": [
+      {
+        "name": "@HomePage",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
