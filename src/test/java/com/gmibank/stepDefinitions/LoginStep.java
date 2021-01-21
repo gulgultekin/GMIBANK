@@ -13,7 +13,7 @@ public class LoginStep {
     @Given("user goes to login page")
     public void user_goes_to_login_page() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("gmibank_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("bankURL"));
 //        loginPage.loginDropdown.click();
         Driver.waitAndClick(loginPage.loginDropdown,5);
         loginPage.signInButton.click();
