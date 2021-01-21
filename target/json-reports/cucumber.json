@@ -3,10 +3,77 @@
     "line": 2,
     "elements": [
       {
-        "line": 3,
-        "name": "User go to Gmibank Home Page",
+        "line": 5,
+        "name": "Customer is in the login page",
         "description": "",
-        "id": "go-to-home-page;user-go-to-gmibank-home-page",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Customer is on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Login to GMI Bank as customer",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Click My Operations icon on the top right corner of the page",
+            "match": {},
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 832800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 42900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "User should see all account types and balance populated",
+        "description": "",
+        "id": "customer-accounts-feature;user-should-see-all-account-types-and-balance-populated",
+        "after": [
+          {
+            "result": {
+              "duration": 42200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -14,27 +81,124 @@
             "result": {
               "status": "undefined"
             },
-            "line": 4,
-            "name": "user go to \"https://www.gmibank.com/\"",
+            "line": 11,
+            "name": "Customer clicks My Accounts button",
             "match": {},
-            "keyword": "Given "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@HomePage"
+            "name": "@All"
+          },
+          {
+            "name": "@MyAccounts"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Customer is in the login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Customer is on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Login to GMI Bank as customer",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Click My Operations icon on the top right corner of the page",
+            "match": {},
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 46200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 9700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "User can view transaction",
+        "description": "",
+        "id": "customer-accounts-feature;user-can-view-transaction",
+        "after": [
+          {
+            "result": {
+              "duration": 12600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Customer clicks Transfer Money and view transaction",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@TransferMoney"
           }
         ]
       }
     ],
-    "name": "Go to Home Page",
+    "name": "Customer Accounts feature",
     "description": "",
-    "id": "go-to-home-page",
+    "id": "customer-accounts-feature",
     "keyword": "Feature",
-    "uri": "src\\test\\resources\\features\\homePage.feature",
+    "uri": "src\\test\\resources\\features\\CustomerAccounts.feature",
     "tags": [
       {
-        "name": "@HomePage",
+        "name": "@All",
         "type": "Tag",
         "location": {
           "line": 1,

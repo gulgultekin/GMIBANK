@@ -11,11 +11,26 @@ public class ManageCustomerAccountPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "")
-    public WebElement element;
+    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    public WebElement ClickToArrowIcon;
 
+    @FindBy(xpath = "//span[.='Sign in']")
+    public WebElement ClickToSigIn;
 
+    @FindBy(id = "username")
+    public WebElement UsernameBox;
 
+    @FindBy(id = "password")
+    public WebElement PasswordTextBox;
+
+    @FindBy(xpath = "//span[.='My Operations']")
+    public WebElement ClickToMyOperationsIcon;
+
+    @FindBy(xpath = "//a[.='My Accounts']")
+    public WebElement ClickToMyAccounts;
+
+    @FindBy(xpath = "//td[.='View Transaction']")
+    public WebElement ClickOnViewTransactionButton;
 
 
 }

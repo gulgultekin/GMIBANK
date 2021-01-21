@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0.006405">
-<testcase classname="Go to Home Page" name="User go to Gmibank Home Page" time="0.006405">
-<skipped><![CDATA[Given user go to "https://www.gmibank.com/".................................undefined
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="2" tests="2" time="0.006203">
+<testcase classname="Customer Accounts feature" name="User should see all account types and balance populated" time="0.005457">
+<skipped><![CDATA[Given Customer is on the login page.........................................undefined
+Then Login to GMI Bank as customer..........................................undefined
+And Click My Operations icon on the top right corner of the page............undefined
+Then Customer clicks My Accounts button.....................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Customer Accounts feature" name="User can view transaction" time="0.000746">
+<skipped><![CDATA[Given Customer is on the login page.........................................undefined
+Then Login to GMI Bank as customer..........................................undefined
+And Click My Operations icon on the top right corner of the page............undefined
+Then Customer clicks Transfer Money and view transaction....................undefined
 ]]></skipped>
 </testcase>
 </testsuite>

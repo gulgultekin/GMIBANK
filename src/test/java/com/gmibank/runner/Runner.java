@@ -15,10 +15,10 @@ import java.net.HttpURLConnection;
                 "junit:target/xml-report/cucumber.xml"
         },
        features = "src/test/resources/features",
-        glue = "gmibank/step_defs",
-        tags = "@HomePage",
+        glue = "com/gmibank/stepDefinitions",
+        tags = "@All",
         dryRun = false
-
+//comment
 
 )
 public class Runner {
