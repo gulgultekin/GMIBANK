@@ -36,13 +36,6 @@ public class LoginPage {
         signInPage.clickSignInBtn();
     }
 
-    @Then("user validates successful login with message")
-    public void user_validates_successful_login_with_message() {
-
-        //there is no success message
-
-    }
-
     @Then("user validates successful login with sign out")
     public void user_validates_successful_login_with_sign_out() {
         Assert.assertTrue(signInPage.validateSignOutLink());
