@@ -61,13 +61,13 @@ public class CommonWebElements {
     public WebElement signInLink;
 
     @FindBy(name="username")
-    private WebElement usernameBox;
+    public WebElement usernameBox;
 
     @FindBy(name="password")
-    private WebElement passwordBox;
+    public WebElement passwordBox;
 
     @FindBy(xpath="//button/span[text()='Sign in']")
-    private WebElement signInBtn;
+    public WebElement signInBtn;
 
     public void clickSignInLink(){
         BrowserUtils.waitForClickablility(profileIcon,3).click();
