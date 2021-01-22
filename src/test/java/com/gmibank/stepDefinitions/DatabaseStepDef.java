@@ -3,9 +3,6 @@ package com.gmibank.stepDefinitions;
 import com.gmibank.utilities.DatabaseUtility;
 import cucumber.api.java.en.Given;
 
-import javax.xml.crypto.Data;
-import java.awt.*;
-import java.sql.*;
 import java.util.List;
 
 public class DatabaseStepDef {

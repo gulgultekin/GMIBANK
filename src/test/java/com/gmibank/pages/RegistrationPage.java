@@ -47,10 +47,6 @@ public class RegistrationPage {
     public WebElement toastContainer;
 
 
-
-
-
-
     public WebElement returnWebElement(String xpath)
     {
         return Driver.getDriver().findElement(By.xpath(xpath));

@@ -31,19 +31,28 @@ public class Driver {
         if (driver == null)
         {
             String browser = ConfigurationReader.getProperty("browser");
-            if ("chrome".equals(browser)) {
+            if ("chrome".equals(browser))
+            {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
-            } else if ("firefox".equals(browser)) {
+            }
+            else if ("firefox".equals(browser))
+            {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
-            } else if ("ie".equals(browser)) {
+            }
+            else if ("ie".equals(browser))
+            {
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
-            } else if ("safari".equals(browser)) {
+            }
+            else if ("safari".equals(browser))
+            {
                 WebDriverManager.getInstance(SafariDriver.class).setup();
                 driver = new SafariDriver();
-            } else if ("chrome-headless".equals(browser)) {
+            }
+            else if ("chrome-headless".equals(browser))
+            {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
             }

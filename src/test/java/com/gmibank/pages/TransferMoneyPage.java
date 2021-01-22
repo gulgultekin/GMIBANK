@@ -7,7 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TransferMoneyPage {
 
-    public TransferMoneyPage(){ PageFactory.initElements(Driver.getDriver(), this); }
+    public TransferMoneyPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
     public WebElement ClickToArrowIcon;
