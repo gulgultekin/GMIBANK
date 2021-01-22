@@ -13,8 +13,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/gmibank/stepDefinitions",
-        tags = "@registrationPage",
-        dryRun = false
+        tags = "@tag131",
+        dryRun =true
+
 
 )
 public class Runner {
