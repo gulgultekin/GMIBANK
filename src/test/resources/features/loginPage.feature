@@ -2,20 +2,23 @@
     Feature: login page
 
     Background:
-        Given user on the login page
-        When user clicks sign in button under user icon
+        Given user goes to login page
 
-    Scenario: User validates login
-        Then user enters valid username "user2020"
-        And user enters valid password "user2020"
-        And user clicks sign in button
+    Scenario Outline: User validates login
+        And user logins as "<role>"
+        Then user logs in
         Then user validates successful login with sign out
+    Examples:
+        |role|
+        |user|
 
-    Scenario: User validates cancel with information
-        Then user enters valid username "user2020"
-        And user enters valid password "user2020"
+    Scenario Outline: User validates cancel with information
+        And user logins as "<role>"
         And user clicks cancel button
         Then user validates return to homepage
+    Examples:
+            |role|
+            |user|
 
     Scenario: User validates cancel without information
         And user clicks cancel button
