@@ -56,4 +56,11 @@ public class CommonWebElements {
     @FindBys({@FindBy(xpath = "//table/tbody/tr")})
     public List<WebElement > allUsers;
 
+    public void navigateCreateAccount(){
+        myOperations.click();
+        manageAccount.click();
+        createANewAccount.click();
+
+    }
+
 }
