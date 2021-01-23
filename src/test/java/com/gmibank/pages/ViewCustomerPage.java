@@ -11,10 +11,10 @@ public class ViewCustomerPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//h2")
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div[1]/div/div/div/div/h2/span")
     public WebElement customerIDHeader;
 
-    @FindBy(xpath = "//b[.='32786']")
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div[1]/div/div/div/div/h2/b")
     public WebElement customerID;
 
     //*[@id="app-view-container"]/div[1]/div/div/div/div/h2/b
@@ -27,5 +27,11 @@ public class ViewCustomerPage {
 
     @FindBy(xpath = "//a[@class='btn btn-primary']")
     public WebElement editButton;
+
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div[1]/div/div/div/div/dl/dd[5]")
+    public WebElement mobilePhoneNumber;
+
+    @FindBy(xpath = "//*[@id='app-view-container']/div[1]/div/div/div/div/dl/dd[4]")
+    public WebElement email;
 
 }
