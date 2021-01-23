@@ -150,6 +150,14 @@ public class Driver {
         }
     }
 
+    public static void editTextBox(WebElement element, String inputValue) {
+        waitAndClick(element,3);
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.BACK_SPACE);
+        element.sendKeys(inputValue);
+        element.sendKeys(Keys.TAB);
+    }
+
     public static void executeJScommand(WebElement element, String command) {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command, element);
