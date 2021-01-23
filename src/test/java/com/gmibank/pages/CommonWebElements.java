@@ -85,4 +85,13 @@ public class CommonWebElements {
         BrowserUtils.waitForClickablility(signInBtn,3).click();
     }
 
+
+
+    public void navigateCreateAccount(){
+        myOperations.click();
+        manageAccount.click();
+        createANewAccount.click();
+
+    }
+
 }

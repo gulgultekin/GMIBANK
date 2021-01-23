@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends CommonWebElements{
 
-
     @FindBy(id = "account-menu")
     public WebElement loginDropdown;
 
@@ -25,10 +24,10 @@ public class LoginPage extends CommonWebElements{
     public WebElement loginButton;
 
     @FindBy(xpath="//a/span[text()='Sign out']")
-    private WebElement signOutLink;
+    public WebElement signOutLink;
 
     @FindBy(xpath="//button/span[text()='Cancel']")
-    private WebElement cancelBtn;
+    public WebElement cancelBtn;
 
     public boolean validateSignOutLink(){
         BrowserUtils.waitForClickablility(profileIcon,3).click();
@@ -43,5 +42,8 @@ public class LoginPage extends CommonWebElements{
         BrowserUtils.waitForClickablility(profileIcon,3).click();
         return BrowserUtils.waitForClickablility(signInLink,5).isDisplayed();
     }
+
+
+
 
 }
