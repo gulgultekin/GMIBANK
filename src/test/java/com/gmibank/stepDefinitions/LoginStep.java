@@ -37,6 +37,15 @@ public class LoginStep {
         if(role.equals("user")){
              username=ConfigurationReader.getProperty("userName");
              password=ConfigurationReader.getProperty("userPassword");
+        }else if(role.equals("admin")){
+            username=ConfigurationReader.getProperty("adminName");
+            password=ConfigurationReader.getProperty("adminPassword");
+        }else if(role.equals("manager")){
+            username=ConfigurationReader.getProperty("managerName");
+            password=ConfigurationReader.getProperty("managerPassword");
+        }else if(role.equals("employee")){
+            username=ConfigurationReader.getProperty("employeeName");
+            password=ConfigurationReader.getProperty("employeePassword");
         }
         Driver.waitAndSendText(loginPage.username,username,5);
         Driver.waitAndSendText(loginPage.password,password,5);

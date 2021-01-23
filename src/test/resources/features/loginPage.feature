@@ -11,6 +11,9 @@
     Examples:
         |role|
         |user|
+        |admin|
+        |manager|
+        |employee|
 
     Scenario Outline: User validates cancel with information
         And user logins as "<role>"
@@ -19,6 +22,9 @@
     Examples:
             |role|
             |user|
+            |admin|
+            |manager|
+            |employee|
 
     Scenario: User validates cancel without information
         And user clicks cancel button
