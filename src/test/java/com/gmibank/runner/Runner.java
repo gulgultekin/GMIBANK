@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         glue = "com/gmibank/stepDefinitions",
         tags = "@registrationPage",
         dryRun = false
-
 )
+
 public class Runner {
 
 
