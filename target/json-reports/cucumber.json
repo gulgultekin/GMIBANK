@@ -11,29 +11,38 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 9387956800,
+              "status": "passed"
             },
             "line": 6,
             "name": "Customer is on the login page",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.customer_is_on_the_login_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 503769200,
+              "status": "passed"
             },
             "line": 7,
             "name": "Login to GMI Bank as customer",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.login_to_GMI_Bank_as_customer()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 363525000,
+              "status": "passed"
             },
             "line": 8,
             "name": "Click My Operations icon on the top right corner of the page",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.click_My_Operations_icon_on_the_top_right_corner_of_the_page()"
+            },
             "keyword": "And "
           }
         ]
@@ -42,7 +51,7 @@
         "before": [
           {
             "result": {
-              "duration": 832800,
+              "duration": 857500,
               "status": "passed"
             },
             "match": {
@@ -51,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 42900,
+              "duration": 36100,
               "status": "passed"
             },
             "match": {
@@ -66,7 +75,7 @@
         "after": [
           {
             "result": {
-              "duration": 42200,
+              "duration": 53000,
               "status": "passed"
             },
             "match": {
@@ -79,11 +88,14 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 578465100,
+              "status": "passed"
             },
             "line": 11,
             "name": "Customer clicks My Accounts button",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.customer_clicks_My_Accounts_button()"
+            },
             "keyword": "Then "
           }
         ],
@@ -105,29 +117,38 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 517828600,
+              "status": "passed"
             },
             "line": 6,
             "name": "Customer is on the login page",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.customer_is_on_the_login_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 528812100,
+              "status": "passed"
             },
             "line": 7,
             "name": "Login to GMI Bank as customer",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.login_to_GMI_Bank_as_customer()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 314600200,
+              "status": "passed"
             },
             "line": 8,
             "name": "Click My Operations icon on the top right corner of the page",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.click_My_Operations_icon_on_the_top_right_corner_of_the_page()"
+            },
             "keyword": "And "
           }
         ]
@@ -136,7 +157,7 @@
         "before": [
           {
             "result": {
-              "duration": 46200,
+              "duration": 42900,
               "status": "passed"
             },
             "match": {
@@ -145,7 +166,7 @@
           },
           {
             "result": {
-              "duration": 9700,
+              "duration": 9900,
               "status": "passed"
             },
             "match": {
@@ -160,7 +181,7 @@
         "after": [
           {
             "result": {
-              "duration": 12600,
+              "duration": 17000,
               "status": "passed"
             },
             "match": {
@@ -173,11 +194,14 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 616333600,
+              "status": "passed"
             },
             "line": 16,
             "name": "Customer clicks Transfer Money and view transaction",
-            "match": {},
+            "match": {
+              "location": "CustomerAccountStepDef.customer_clicks_Transfer_Money_and_view_transaction()"
+            },
             "keyword": "Then "
           }
         ],

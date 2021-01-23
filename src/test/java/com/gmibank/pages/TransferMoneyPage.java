@@ -12,10 +12,10 @@ public class TransferMoneyPage {
     }
 
     @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
-    public WebElement ClickToArrowIcon;
+    public WebElement ClickOnArrowIcon;
 
     @FindBy(xpath = "//span[.='Sign in']")
-    public WebElement ClickToSigIn;
+    public WebElement ClickOnSigIn;
 
     @FindBy(id = "username")
     public WebElement UsernameBox;
@@ -24,7 +24,7 @@ public class TransferMoneyPage {
     public WebElement PasswordTextBox;
 
     @FindBy(xpath = "//span[.='My Operations']")
-    public WebElement ClickToMyOperationsIcon;
+    public WebElement ClickOnMyOperationsIcon;
 
     @FindBy(xpath = "//a[.='Transfer Money']")
     public WebElement ClickOnTransferMoney;
@@ -44,7 +44,7 @@ public class TransferMoneyPage {
     @FindBy(id = "description")
     public WebElement DescriptionTextBox;
 
-    @FindBy(id = "make-transfer")
+    @FindBy(xpath = "//div/form/button")
     public WebElement ClickOnMakeTransferButton;
 
 
