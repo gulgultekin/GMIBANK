@@ -27,6 +27,7 @@ public class Driver {
     //to initialize the driver we create a static method
     public static WebDriver getDriver()
     {
+
         //create the driver if and only if it is null
         if (driver == null)
         {
@@ -147,6 +148,14 @@ public class Driver {
         } catch (Exception error) {
             error.printStackTrace();
         }
+    }
+
+    public static void editTextBox(WebElement element, String inputValue) {
+        waitAndClick(element,3);
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.BACK_SPACE);
+        element.sendKeys(inputValue);
+        element.sendKeys(Keys.TAB);
     }
 
     public static void executeJScommand(WebElement element, String command) {

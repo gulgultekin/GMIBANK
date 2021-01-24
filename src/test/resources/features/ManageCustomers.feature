@@ -1,8 +1,5 @@
 @ManageCustomer_US12
-Feature: end to end workflow
-
-
-
+Feature: Manage Customer workflow
 
   Scenario Outline: go to sign in and view
     Given user goes to login page
@@ -17,13 +14,17 @@ Feature: end to end workflow
       |username|password|
       |Rosa2001|Rosa2001@|
 
-  Scenario: edit customer info
+  Scenario Outline: edit customer info
     And user navigates to my operations
     When user clicks on manageCustomer
     And user clicks on Edit button
-    Then user goes to mobile phone inputbox and edit
+    Then user goes  inputbox and edit "<mobilePhoneNum>"and "<email>"
     And user scroll down and click save button
     Then verify success message is displayed
+
+    Examples:
+    |mobilePhoneNum|email|
+    |555-555-5555|newemail.com|
 
 
   Scenario: delete customer

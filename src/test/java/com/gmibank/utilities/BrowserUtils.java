@@ -213,6 +213,14 @@ public class BrowserUtils {
     public static void doubleClick(WebElement element) {
         new Actions(Driver.getDriver()).doubleClick(element).build().perform();
     }
+
+    public static void scrollUp(int pixel) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("window.scrollBy(0,-" + pixel + ")");
+    }
+
+    public static void scrollDown(int pixel) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("window.scrollBy(0," + pixel + ")");
+    }
     /**
      * Changes the HTML attribute of a Web Element to the given value using JavaScript
      *
