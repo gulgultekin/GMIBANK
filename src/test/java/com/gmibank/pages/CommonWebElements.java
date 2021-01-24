@@ -1,6 +1,10 @@
 package com.gmibank.pages;
 
 
+
+
+import com.gmibank.utilities.BrowserUtils;
+
 import com.gmibank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,6 +61,36 @@ public class CommonWebElements {
 
     @FindBys({@FindBy(xpath = "//table/tbody/tr")})
     public List<WebElement> allUsers;
+
+    @FindBy(id="login-item")
+    public WebElement signInLink;
+
+    @FindBy(name="username")
+    public WebElement usernameBox;
+
+    @FindBy(name="password")
+    public WebElement passwordBox;
+
+    @FindBy(xpath="//button/span[text()='Sign in']")
+    public WebElement signInBtn;
+
+    public void clickSignInLink(){
+        BrowserUtils.waitForClickablility(profileIcon,3).click();
+        BrowserUtils.waitForClickablility(signInLink,5).click();
+    }
+    public void enterUsername(String username){
+        BrowserUtils.waitForVisibility(usernameBox,3).sendKeys(username);
+    }
+
+    public void enterPassword(String password){
+        BrowserUtils.waitForVisibility(passwordBox,3).sendKeys(password);
+    }
+
+    public void clickSignInBtn(){
+        BrowserUtils.waitForClickablility(signInBtn,3).click();
+    }
+
+
 
     public void navigateCreateAccount(){
         myOperations.click();

@@ -27,12 +27,14 @@ public class Driver {
     //to initialize the driver we create a static method
     public static WebDriver getDriver()
     {
+
         //create the driver if and only if it is null
         if (driver == null)
         {
             String browser = ConfigurationReader.getProperty("browser");
             if ("chrome".equals(browser))
             {
+                WebDriverManager.chromedriver().clearPreferences();
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
             }
