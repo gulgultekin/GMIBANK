@@ -16,13 +16,11 @@ public class CommonWebElements {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
     @FindBy(xpath = "//*[@id='account-menu']/a")
     public WebElement profileIcon;
 
     @FindBy(xpath = "//*[@id='account-menu']/div/a[2]/span")
     public WebElement registerButton;
-
 
     @FindBy(xpath = "//*[text()='My Operations']")
     public WebElement myOperations;
