@@ -2,6 +2,7 @@ package com.gmibank.stepDefinitions;
 
 import com.gmibank.pages.CommonWebElements;
 import com.gmibank.pages.RegistrationPage;
+
 import com.gmibank.utilities.ConfigurationReader;
 import com.gmibank.utilities.Driver;
 import cucumber.api.java.en.Given;
