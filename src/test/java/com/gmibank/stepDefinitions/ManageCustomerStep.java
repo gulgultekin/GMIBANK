@@ -7,10 +7,15 @@ import com.gmibank.pages.ViewCustomerPage;
 import com.gmibank.pojos.Customer;
 import com.gmibank.utilities.BrowserUtils;
 import com.gmibank.utilities.Driver;
+import cucumber.api.CucumberOptions;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.junit.Cucumber;
 import org.junit.Assert;
+
 import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -169,12 +174,6 @@ public class ManageCustomerStep
     }
 
 
-
-
-
-
-
-
     @Then("user scroll down and click save button")
     public void user_scroll_down_and_click_save_button() {
 
@@ -184,18 +183,5 @@ public class ManageCustomerStep
     public void verify_success_message_is_displayed() {
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
