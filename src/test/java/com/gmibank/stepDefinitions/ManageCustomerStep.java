@@ -48,7 +48,7 @@ public class ManageCustomerStep
     public void user_clicks_on_View_button() {
 
         Driver.waitAndClick(manageCustomerPage.viewButton,5);
-       BrowserUtils.wait(5);
+      // BrowserUtils.wait(5);
     }
 
     @Then("verify that customer info displayed")
@@ -89,7 +89,7 @@ public class ManageCustomerStep
         Driver.editTextBox(editCustomerPage.mobilePhoneNumInputBox, mobilePhoneNum);
         Driver.editTextBox(editCustomerPage.emailInputBox,email);
 
-            BrowserUtils.wait(5);
+           // BrowserUtils.wait(5);
         // Click save Button
         js.executeScript("arguments[0].scrollIntoView(true);" +"arguments[0].click()",editCustomerPage.saveButton);
 
@@ -97,11 +97,11 @@ public class ManageCustomerStep
         Driver.waitForVisibility(manageCustomerPage.editSuccessMessage, 5);
         Assert.assertTrue((manageCustomerPage.editSuccessMessage.isDisplayed()));
 
-            BrowserUtils.wait(5);
+           // BrowserUtils.wait(5);
         // Right now we are in Manage Customer page. Find User ID
         BrowserUtils.clickWithJS(Driver.getDriver().findElement(By.xpath("//a[.='"+ existingCustomer.getId() +"']")));
 
-            BrowserUtils.wait(5);
+           // BrowserUtils.wait(5);
         // Check if we have edited User Id and matching with edited phone number
         WebElement idElement = viewCustomerPage.customerID;
         Assert.assertEquals(existingCustomer.getId(), Integer.parseInt(idElement.getText()));
@@ -119,12 +119,12 @@ public class ManageCustomerStep
         //go back to previous page(Manage customer page) and click edit button again to put old value back
         js.executeScript("window.history.go(-1)");
         BrowserUtils.clickWithJS(manageCustomerPage.editButton);
-            BrowserUtils.wait(5);
+           // BrowserUtils.wait(5);
         Driver.waitAndClick(editCustomerPage.mobilePhoneNumInputBox,3);
         editCustomerPage.mobilePhoneNumInputBox.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         editCustomerPage.mobilePhoneNumInputBox.sendKeys(Keys.BACK_SPACE);
         editCustomerPage.mobilePhoneNumInputBox.sendKeys(this.existingCustomer.getMobilePhoneNumber());
-            BrowserUtils.wait(5);
+           // BrowserUtils.wait(5);
         Driver.waitAndClick(editCustomerPage.emailInputBox,3);
         editCustomerPage.emailInputBox.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         editCustomerPage.emailInputBox.sendKeys(Keys.BACK_SPACE);
