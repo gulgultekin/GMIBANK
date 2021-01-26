@@ -5,6 +5,9 @@ import com.gmibank.pages.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
+import java.text.DecimalFormat;
+import java.util.Formatter;
+
 import static com.gmibank.utilities.Driver.getDriver;
 
 public class PageInitializer {
@@ -20,4 +23,7 @@ public class PageInitializer {
     public static Faker faker = new Faker();
     public static RegistrationPage registrationPage = new RegistrationPage();
     public static CommonWebElements commonWebElements = new CommonWebElements();
+    public static DecimalFormat decimalFormat;
+
 }
+
