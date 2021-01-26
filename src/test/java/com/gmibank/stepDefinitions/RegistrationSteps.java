@@ -1,5 +1,6 @@
 package com.gmibank.stepDefinitions;
 
+import com.github.javafaker.Faker;
 import com.gmibank.pages.CommonWebElements;
 import com.gmibank.pages.RegistrationPage;
 import com.gmibank.utilities.ConfigurationReader;
@@ -13,10 +14,13 @@ public class RegistrationSteps {
 
     RegistrationPage registrationPage = new RegistrationPage();
     CommonWebElements commonWebElements=new CommonWebElements();
+    Faker faker=new Faker();
+
 
     @Given("user is on the home page")
-    public void user_is_on_the_home_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("bankURL"));
+    public void user_is_on_the_home_page()
+    {
+        Driver.returnConfigurationReaderValue("bankURL");
     }
 
     @When("user go to registration page")
@@ -49,11 +53,10 @@ public class RegistrationSteps {
         Driver.waitAndSendText( registrationPage.mobilephoneTextbox,mobilePhone,5);
     }
 
-    @Then("user provides a username {string}")
-    public void user_provides_a_username(String username) {
+    @Then("user provides a username")
+    public void user_provides_a_username() {
 
-
-        Driver.waitAndSendText( registrationPage.usernameTextbox,username,5);
+        Driver.waitAndSendText( registrationPage.usernameTextbox, faker.name().username(),5);
     }
 
     @Then("user provides email id as {string}")

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CommonWebElements {
+public class CommonWebElements  {
 
     public CommonWebElements()
     {

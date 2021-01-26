@@ -175,4 +175,17 @@ public class Driver {
         }
 
     }
+
+
+
+    public static WebElement returnWebElement(String xpath)
+    {
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+    public static void returnConfigurationReaderValue(String value)
+    {
+        Driver.getDriver().get(ConfigurationReader.getProperty(value));
+    }
+
 }

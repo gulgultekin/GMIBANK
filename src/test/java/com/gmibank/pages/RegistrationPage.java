@@ -1,17 +1,18 @@
 package com.gmibank.pages;
 
+import com.gmibank.utilities.ConfigurationReader;
 import com.gmibank.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegistrationPage {
+public class RegistrationPage extends CommonWebElements{
 
-    public RegistrationPage()
-    {
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+    //public RegistrationPage()
+    //{
+      //  PageFactory.initElements(Driver.getDriver(),this);
+    //}
 
     @FindBy(id="ssn")
     public WebElement ssnTextbox;
@@ -45,14 +46,5 @@ public class RegistrationPage {
 
     @FindBy(xpath = "//*[contains(text(),'translation-not-foun'")
     public WebElement toastContainer;
-
-
-
-    public WebElement returnWebElement(String xpath)
-    {
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
-
-
 
 }

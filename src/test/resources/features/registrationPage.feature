@@ -7,7 +7,7 @@
       Then user enters firstname and lastname as "team24" and "gmibank"
       Then user provides address "USA"
       Then user provides mobilephone as "123-456-7890"
-      Then user provides a username "TEAM24"
+      Then user provides a username
       Then user provides email id as "gmibankteam24@gmail.com"
       Then user enters the password as "Team.24"
       Then user confirms the new password "Team.24"
