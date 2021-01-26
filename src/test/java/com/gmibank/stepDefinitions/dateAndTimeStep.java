@@ -6,6 +6,7 @@ import com.gmibank.pojos.Customer;
 import com.gmibank.utilities.ConfigurationReader;
 import com.gmibank.utilities.DateUtil;
 import com.gmibank.utilities.Driver;
+import com.gmibank.utilities.PageInitializer;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -19,17 +20,9 @@ import java.util.Locale;
 
 import static com.gmibank.utilities.Driver.getDriver;
 
-public class dateAndTimeStep {
+public class dateAndTimeStep extends PageInitializer {
 
-    CommonWebElements employeePage = new CommonWebElements();
-    ManageCustomerPage manageCustomerPage = new ManageCustomerPage();
-    Actions actions = new Actions(getDriver());
-    JavascriptExecutor js = (JavascriptExecutor) getDriver();
-    ConfigurationReader configReader = new ConfigurationReader();
-    CreateEditUser user = new CreateEditUser();
-    UserManagementPage userManagementPage = new UserManagementPage();
-    EditCustomerPage editCustomer = new EditCustomerPage();
-    Faker faker = new Faker();
+
     String login = faker.name().firstName();
     String firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
