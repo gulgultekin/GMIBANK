@@ -29,6 +29,17 @@ public class LoginPage extends CommonWebElements{
     @FindBy(xpath="//button/span[text()='Cancel']")
     public WebElement cancelBtn;
 
+    @FindBy(xpath = "//div[@role='alert']")
+    public  WebElement failedToSignInMessage;
+
+    @FindBy(linkText = "Did you forget your password?")
+    public WebElement didYouForgetYourPasswordLink;
+
+    // @FindBy(xpath = "(//a[@href='/account/register'])[2]")
+
+    @FindBy(xpath = "//*[@id=\"login-page\"]/div/form/div[2]/div[4]/a")
+    public WebElement registerANewAccountLink;
+
     public boolean validateSignOutLink(){
         BrowserUtils.waitForClickablility(profileIcon,3).click();
         return BrowserUtils.waitForVisibility(signOutLink,3).isDisplayed();
