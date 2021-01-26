@@ -5,17 +5,13 @@ import com.gmibank.pages.CommonWebElements;
 import com.gmibank.pages.RegistrationPage;
 import com.gmibank.utilities.ConfigurationReader;
 import com.gmibank.utilities.Driver;
+import com.gmibank.utilities.PageInitializer;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 
-public class RegistrationSteps {
-
-    RegistrationPage registrationPage = new RegistrationPage();
-    CommonWebElements commonWebElements=new CommonWebElements();
-    Faker faker=new Faker();
-
+public class RegistrationSteps extends PageInitializer {
 
     @Given("user is on the home page")
     public void user_is_on_the_home_page()
