@@ -85,6 +85,7 @@ public class Driver {
         }
     }
 
+
     public static void waitAndSendText(WebElement element,String text, int timeout) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -175,4 +176,25 @@ public class Driver {
         }
 
     }
+
+
+
+
+
+    public static WebElement returnWebElement(String xpath)
+    {
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+    public static void ConfigurationReaderValue(String value)
+    {
+        Driver.getDriver().get(ConfigurationReader.getProperty(value));
+    }
+
+    public static String returnConfigurationReaderValue(String value)
+    {
+        return ConfigurationReader.getProperty(value);
+    }
+
 }
+
