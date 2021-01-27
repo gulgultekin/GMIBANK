@@ -66,7 +66,49 @@ public class RegistrationPage extends CommonWebElements{
         return userName;
     }
 
+<<<<<<< Updated upstream
     public String randomNumber(int bound)
+=======
+    @FindBy(xpath = "//div[.='Your SSN is invalid']")
+    public WebElement ssnInvalidErrorMessage;
+
+    @FindBy(xpath = "//div[.='Your mobile phone number is invalid']")
+    public WebElement mobilePhoneInvalidErrorMessage;
+
+    @FindBy(xpath = "//div[.='This field is invalid']")
+    public WebElement emailInvalidErrorMessage;
+
+
+
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[1]")
+    public WebElement ssnEmptyErrorMessage;
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[2]")
+    public WebElement firstNameEmptyErrorMessage;
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[3]")
+    public WebElement lastNameEmptyErrorMessage;
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[4]")
+    public WebElement userNameEmptyErrorMessage;
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[5]")
+    public WebElement emailEmptyErrorMessage;
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[6]")
+    public WebElement passwordEmptyErrorMessage;
+
+    @FindBy(xpath="(//div[@class='invalid-feedback'])[7]")
+    public WebElement confirmationPasswordEmptyErrorMessage;
+
+
+
+
+
+
+    public WebElement returnWebElement(String xpath)
+>>>>>>> Stashed changes
     {
         String mobilePhone ="";
 
