@@ -49,25 +49,8 @@ public class RegistrationPage extends CommonWebElements{
     @FindBy(xpath = "//*[contains(text(),'translation-not-foun'")
     public WebElement toastContainer;
 
-    public String createUserName(String firstName,String lastName,String userName)
-    {
-        for(int i=0; i< firstName.length(); i++)
-        {
-            userName+=String.valueOf(firstName.charAt(i));
-            if(i==3)
-                break;
-        }
-        for(int i=0; i< lastName.length(); i++)
-        {
-            userName+=String.valueOf(lastName.charAt(i));
-            if(i==3)
-                break;
-        }
-        return userName;
-    }
 
-    public String randomNumber(int bound)
-=======
+
     @FindBy(xpath = "//div[.='Your SSN is invalid']")
     public WebElement ssnInvalidErrorMessage;
 
@@ -76,8 +59,6 @@ public class RegistrationPage extends CommonWebElements{
 
     @FindBy(xpath = "//div[.='This field is invalid']")
     public WebElement emailInvalidErrorMessage;
-
-
 
 
     @FindBy(xpath="(//div[@class='invalid-feedback'])[1]")
@@ -104,15 +85,28 @@ public class RegistrationPage extends CommonWebElements{
 
 
 
+    public String createUserName(String firstName,String lastName,String userName)
+    {
+        for(int i=0; i< firstName.length(); i++)
+        {
+            userName+=String.valueOf(firstName.charAt(i));
+            if(i==3)
+                break;
+        }
+        for(int i=0; i< lastName.length(); i++)
+        {
+            userName+=String.valueOf(lastName.charAt(i));
+            if(i==3)
+                break;
+        }
+        return userName;
+    }
 
 
-    public WebElement returnWebElement(String xpath)
->>>>>>> Stashed changes
+    public String randomNumber(int bound)
     {
         String mobilePhone ="";
-
         Random random=new Random();
-
         for(int i=0; i<bound;i++)
         {
             mobilePhone +=String.valueOf(random.nextInt(bound));
