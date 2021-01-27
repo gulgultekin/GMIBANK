@@ -1,4 +1,5 @@
 @User_US08
+#noinspection CucumberUndefinedStep
 Feature:Password segment on homepage should be editable
 
   Scenario Outline: Password Segment should be editable

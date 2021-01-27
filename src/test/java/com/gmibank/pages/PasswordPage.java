@@ -35,6 +35,9 @@ public class PasswordPage {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement successMessage;
 
+    @FindBy(xpath = "//button[@class='Toastify__close-button Toastify__close-button--error']")
+    public WebElement errorMessage;
+
     @FindBy(className = "invalid-feedback")
     public WebElement passwordRequiredMessage;
 
