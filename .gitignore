@@ -1,5 +1,7 @@
-target
 .idea
+/target
 *.iml
 test-output
 debug.log
+
+

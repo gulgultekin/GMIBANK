@@ -1,3 +1,4 @@
+
 package com.gmibank.stepDefinitions;
 
 import com.github.javafaker.Faker;
@@ -79,14 +80,14 @@ public class RegistrationSteps extends PageInitializer {
     }
 
     @Then("user clicks on register button and sees the success message")
-    public void user_clicks_on_register_button_and_sees_the_success_message_as()
-    {
-         Driver.waitAndClick(registrationPage.registerButton,5);
 
-          String value =Driver.getDriver().switchTo().alert().getText();
-          Assert.assertEquals(Driver.returnConfigurationReaderValue("successMessageOfRegistration"),value);
+    public void user_clicks_on_register_button_and_sees_the_success_message_as() {
+        Driver.waitAndClick(registrationPage.registerButton,5);
 
-          //System.out.println(registrationPage.toastContainer.getAttribute("class"));
-          //System.out.println("here it is: "+registrationPage.toastContainer.getAttribute(""));
+        String value =Driver.getDriver().switchTo().alert().getText();
+        Assert.assertEquals(Driver.returnConfigurationReaderValue("successMessageOfRegistration"),value);
+
+        //System.out.println(registrationPage.toastContainer.getAttribute("class"));
+        //System.out.println("here it is: "+registrationPage.toastContainer.getAttribute(""));
+        }
     }
-}

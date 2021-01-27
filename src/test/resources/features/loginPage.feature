@@ -1,5 +1,7 @@
-    @login
-    Feature: login page
+
+@login
+
+Feature: login page
 
     Background:
         Given user goes to login page
@@ -29,3 +31,4 @@
     Scenario: User validates cancel without information
         And user clicks cancel button
         Then user validates return to homepage
+

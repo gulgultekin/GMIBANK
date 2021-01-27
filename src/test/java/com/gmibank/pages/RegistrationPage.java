@@ -66,7 +66,6 @@ public class RegistrationPage extends CommonWebElements{
         return userName;
     }
 
-<<<<<<< Updated upstream
     public String randomNumber(int bound)
 =======
     @FindBy(xpath = "//div[.='Your SSN is invalid']")
