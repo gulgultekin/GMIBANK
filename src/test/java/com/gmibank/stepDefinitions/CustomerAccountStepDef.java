@@ -6,8 +6,10 @@ import com.gmibank.pages.LoginPage;
 import com.gmibank.pages.TransferMoneyPage;
 import com.gmibank.utilities.ConfigurationReader;
 import com.gmibank.utilities.Driver;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class CustomerAccountStepDef {
     CommonWebElements commonWebElements=new CommonWebElements();
@@ -24,7 +26,7 @@ public class CustomerAccountStepDef {
 
     }
 
-    @Then("Login to GMI Bank as customer")
+    @When("Login to GMI Bank as customer")
     public void login_to_GMI_Bank_as_customer() {
 
         Driver.waitAndClick(loginPage.loginDropdown,5);
@@ -43,7 +45,7 @@ public class CustomerAccountStepDef {
 
     }
 
-    @Then("Customer clicks My Accounts button")
+    @Then("Customer clicks on My Accounts button")
     public void customer_clicks_My_Accounts_button() {
         Driver.waitAndClick(customerAccountsPage.ClickOnMyAccounts, 5);
         Driver.waitAndClick(customerAccountsPage.ClickOnViewTransactionButton1,5);
@@ -52,7 +54,7 @@ public class CustomerAccountStepDef {
         Driver.waitAndClick(commonWebElements.signOutButton,5);
     }
 
-    @Then("Customer clicks Transfer Money and view transaction")
+    @Then("Customer clicks on Transfer Money and view transaction")
     public void customer_clicks_Transfer_Money_and_view_transaction() {
 
         Driver.waitAndClick(transferMoneyPage.ClickOnTransferMoney,5);
