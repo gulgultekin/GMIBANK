@@ -10,6 +10,8 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import com.gmibank.pojos.Country;
+import com.gmibank.pojos.Customer;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -242,22 +244,8 @@ public class PDFGenerator {
 
         list.add(customer);
 
-
-
-
-
-
-
-
-
         String header = "All Applicants Information";
         String fileName ="applicants.pdf";
-
-
-
-
-
-
 
         pdfGeneratorRowsAndCellsWithList(header,list,fileName);
     }

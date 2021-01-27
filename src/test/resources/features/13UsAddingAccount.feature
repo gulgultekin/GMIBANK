@@ -1,4 +1,4 @@
-@Smoke
+git@Smoke
   Feature: Adding Account As an Employee
     Scenario: Verify adding Account
       Given user goes to login page

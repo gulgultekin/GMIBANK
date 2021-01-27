@@ -67,6 +67,7 @@ public class RegistrationPage extends CommonWebElements{
     }
 
     public String randomNumber(int bound)
+
     {
         String mobilePhone ="";
 

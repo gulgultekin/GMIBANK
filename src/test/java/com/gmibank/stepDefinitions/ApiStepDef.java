@@ -1,8 +1,16 @@
 package com.gmibank.stepDefinitions;
 
+
+import com.gmibank.utilities.ConfigurationReader;
+import cucumber.api.java.en.Given;
+import io.restassured.http.ContentType;
+import javax.xml.ws.Response;
+import static io.restassured.RestAssured.given;
+
 import cucumber.api.java.en.Given;
 
 import javax.xml.ws.Response;
+
 
 public class ApiStepDef
 {

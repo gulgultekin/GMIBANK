@@ -1,6 +1,10 @@
 package com.gmibank.pages;
 
+
+
+
 import com.gmibank.utilities.BrowserUtils;
+
 import com.gmibank.utilities.Driver;
 import com.gmibank.utilities.PageInitializer;
 import org.openqa.selenium.WebElement;
@@ -9,6 +13,7 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+
 
 public class CommonWebElements {
 
@@ -54,7 +59,7 @@ public class CommonWebElements {
     public WebElement userManagementButton;
 
     @FindBys({@FindBy(xpath = "//table/tbody/tr")})
-    public List<WebElement > allUsers;
+    public List<WebElement> allUsers;
 
     @FindBy(id="login-item")
     public WebElement signInLink;
