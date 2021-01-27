@@ -2,7 +2,7 @@
 /target
 *.iml
 test-output
-debug.log
+*.log
 
 
 
