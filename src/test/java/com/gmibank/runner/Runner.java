@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/gmibank/stepDefinitions",
 
-        tags = "@US-05-InvalidCredentials",
+        tags = "@userInfoNegative",
+        dryRun = false,
 
-        dryRun =false,
         plugin = {
                 "html:target/default-cucumber-reports",
                 "json:target/json-reports/cucumber.json",
@@ -32,9 +32,7 @@ import org.junit.runner.RunWith;
 
 
 )
-
 public class Runner {
-
 
 }
 

@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import static com.gmibank.utilities.Driver.getDriver;
 
-public class dateAndTimeStep extends PageInitializer {
+public class DateAndTimeStep extends PageInitializer {
 
 
     String login = faker.name().firstName();
