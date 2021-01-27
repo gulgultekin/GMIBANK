@@ -25,6 +25,10 @@ public class UserInfoPage {
     @FindBy(xpath = "//select[@name='langKey']")
     public WebElement languageField;
 
+    @FindBy(xpath = "//div[text()='This field is invalid']")
+    public WebElement emailErrorMessage;
+
+
 
 
 }

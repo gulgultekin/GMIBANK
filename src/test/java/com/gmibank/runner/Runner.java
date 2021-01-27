@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com/gmibank/stepDefinitions",
-        tags = "@login",
-        dryRun =false,
+        tags = "@userInfoNegative",
+        dryRun = false,
         plugin = {
                 "html:target/default-cucumber-reports",
                 "json:target/json-reports/cucumber.json",
