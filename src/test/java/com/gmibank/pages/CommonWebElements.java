@@ -2,6 +2,7 @@ package com.gmibank.pages;
 
 import com.gmibank.utilities.BrowserUtils;
 import com.gmibank.utilities.Driver;
+import com.gmibank.utilities.PageInitializer;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;

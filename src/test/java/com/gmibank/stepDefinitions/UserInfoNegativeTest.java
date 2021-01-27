@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -35,35 +36,18 @@ public class UserInfoNegativeTest {
     @Then("user verifies that there is only following languages are displayed")
     public void user_verifies_that_there_is_only_following_languages_are_displayed(List<String> expectedLanguages) {
         System.out.println(expectedLanguages);
+        List<String> actualLanguages=new ArrayList<>();
 
         Select select = new Select(userInfo.languageField);
         List<WebElement> listOfActualLanguages = select.getOptions();
 
         Iterator<WebElement> i = listOfActualLanguages.iterator();
         while (i.hasNext()) {
-            System.out.println(i.next().getText());
-
-
-
-
-
+            actualLanguages.add(i.next().getText());
+        }
+        for(int j=0;j<actualLanguages.size();j++){
+            Assert.assertEquals("Verified that there is only English and Turkish ", expectedLanguages.get(j),actualLanguages.get(j));
         }
     }
 }
 
-//    public boolean validateLanguageOptions(){ 
-//        Select langBox=new Select(languageBox); 
-//        List<WebElement> langList=langBox.getOptions();  
-//        int countEng=0; 
-//        int countTurk=0; 
-//        for (int i = 0; i <langList.size(); i++) { 
-//            if(langList.get(i).getText().equals("English")){ 
-//                countEng++;             } 
-//            if(langList.get(i).getText().equals("Türkçe")){ 
-//                countTurk++;             }         } 
-//        return (countEng==1 & countTurk==1&langList.size()==2); 
-
-//@Then("user validates there are two language options") 
-//public void user_validates_there_are_two_language_options() {  
-//        Assert.assertTrue(userInfoPage.validateLanguageOptions()); 
-//} 

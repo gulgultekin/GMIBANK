@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UserInfoPage {
     public UserInfoPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
