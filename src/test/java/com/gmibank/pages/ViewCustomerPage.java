@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ViewCustomerPage {
 
     public ViewCustomerPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

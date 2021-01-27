@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UserInfoPage {
     public UserInfoPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -24,6 +25,10 @@ public class UserInfoPage {
 
     @FindBy(xpath = "//select[@name='langKey']")
     public WebElement languageField;
+
+    @FindBy(xpath = "//div[text()='This field is invalid']")
+    public WebElement emailErrorMessage;
+
 
 
 
