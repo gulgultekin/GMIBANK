@@ -29,6 +29,10 @@ public class DateUtil {
         String today = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
         return today;
     }
+    public static String todaysDate5(){
+        String today = new SimpleDateFormat("dd/MM/yy HH:mm").format(new Date());
+        return today;
+    }
 }
 
 

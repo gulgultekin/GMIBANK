@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CustomerAccountsPage {
+
     public CustomerAccountsPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -37,6 +38,8 @@ public class CustomerAccountsPage {
 
     @FindBy(xpath = "//table/tbody/tr[2]/td[4]/button")
     public WebElement ClickOnViewTransactionButton2;
+
+
 
 
 }
