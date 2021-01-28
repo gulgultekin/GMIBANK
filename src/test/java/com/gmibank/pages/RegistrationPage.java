@@ -46,7 +46,7 @@ public class RegistrationPage extends CommonWebElements{
     @FindBy(id = "register-submit")
     public WebElement registerButton;
 
-    @FindBy(xpath = "//*[contains(text(),'translation-not-foun'")
+    @FindBy(xpath = "//*[@id='root']/div/div/div[1]/div")
     public WebElement toastContainer;
 
 
