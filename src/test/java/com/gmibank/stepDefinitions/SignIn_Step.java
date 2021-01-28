@@ -11,6 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class SignIn_Step {
+
     LoginPage loginPage = new LoginPage();
     ResetYourPasswordPage resetYourPasswordPage = new ResetYourPasswordPage();
     RegistrationPage registrationPage=new RegistrationPage();

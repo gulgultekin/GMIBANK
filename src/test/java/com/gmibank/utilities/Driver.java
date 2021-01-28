@@ -160,6 +160,13 @@ public class Driver {
         element.sendKeys(Keys.TAB);
     }
 
+    public static void sendTextAndEnter(WebElement element, String inputValue) {
+        waitAndClick(element,3);
+        element.sendKeys(inputValue);
+        element.sendKeys(Keys.ENTER);
+    }
+
+
     public static void executeJScommand(WebElement element, String command) {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command, element);
