@@ -20,7 +20,6 @@ public class UserInfoNegativeTest {
     UserInfoPage userInfo = new UserInfoPage();
     CommonWebElements common = new CommonWebElements();
 
-
     @When("User writes the new Email {string} without @ or . sign")
     public void user_writes_the_new_Email_without_or_sign(String invalidEmail) {
         Driver.waitAndSendText(userInfo.emailField, invalidEmail, 3);
@@ -36,7 +35,7 @@ public class UserInfoNegativeTest {
     @Then("user verifies that there is only following languages are displayed")
     public void user_verifies_that_there_is_only_following_languages_are_displayed(List<String> expectedLanguages) {
         System.out.println(expectedLanguages);
-        List<String> actualLanguages=new ArrayList<>();
+        List<String> actualLanguages = new ArrayList<>();
 
         Select select = new Select(userInfo.languageField);
         List<WebElement> listOfActualLanguages = select.getOptions();
@@ -45,9 +44,8 @@ public class UserInfoNegativeTest {
         while (i.hasNext()) {
             actualLanguages.add(i.next().getText());
         }
-        for(int j=0;j<actualLanguages.size();j++){
-            Assert.assertEquals("Verified that there is only English and Turkish ", expectedLanguages.get(j),actualLanguages.get(j));
+        for (int j = 0; j < actualLanguages.size(); j++) {
+            Assert.assertEquals("Verified that there is only English and Turkish ", expectedLanguages.get(j), actualLanguages.get(j));
         }
     }
 }
-

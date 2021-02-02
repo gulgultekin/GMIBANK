@@ -22,7 +22,6 @@ import static com.gmibank.utilities.Driver.getDriver;
 
 public class DateAndTimeStep extends PageInitializer {
 
-
     String login = faker.name().firstName();
     String firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
