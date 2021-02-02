@@ -10,7 +10,6 @@ Feature: User segment doesn't allow updates with invalid data
     And User should see info being populated
 
   Scenario: Email with invalid data
-
     When User navigates and deletes the email
     And User writes the new Email "marygmail.com" without @ or . sign
     Then user verifies that "This field is invalid" is displayed
@@ -19,7 +18,6 @@ Feature: User segment doesn't allow updates with invalid data
     When User goes to the language dropdown and clicks on it
     And User chooses English
     And User chooses Turkish
-
     Then user verifies that there is only following languages are displayed
-      | English   |
-      | Türkçe    |
+      | English |
+      | Türkçe  |
