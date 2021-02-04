@@ -40,7 +40,7 @@ public class PDFGenerator {
 
             document.add(new Paragraph(pdf_title));
 
-            PdfPTable table = new PdfPTable(5);
+            PdfPTable table = new PdfPTable(headers.size());
 
             table.setWidthPercentage(110);
             table.setSpacingBefore(12);

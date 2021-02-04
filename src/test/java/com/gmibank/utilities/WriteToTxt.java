@@ -5,6 +5,7 @@ import com.gmibank.pojos.States;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.List;
 
 public class WriteToTxt {
 
@@ -72,6 +73,18 @@ public class WriteToTxt {
 
             for (int i=0; i<states.length; i++)
                 writer.append(states[i].getName()+" , "+states[i].getId()+"\n");
+
+            writer.close();
+        } catch(Exception e){
+
+        }
+    }
+    public static void saveAllStatesBenim(String fileName, List<Object> list)  {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+
+            for (int i=0; i< list.size(); i++)
+                writer.append(list.get(i)+"\n");
 
             writer.close();
         } catch(Exception e){

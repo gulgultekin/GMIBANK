@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class UserManagementPage {
-    public UserManagementPage(){PageFactory.initElements(Driver.getDriver(),this);
+    public UserManagementPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
 }
     @FindBy(xpath = "//*[text()='Created date']")
     public WebElement createDateButton;
