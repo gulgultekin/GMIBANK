@@ -7,12 +7,17 @@ public class User {
 
     private int id;
     private String login;
+    private String password_hash;
     private String firstName;
     private String lastName;
     private String email;
+    private String created_by;
+    private String created_date;
+    private String last_modified_by;
     private boolean activated;
     private String langKey;
     private String imageUrl;
+    private String resetDate;
 
     public int getId() {
         return id;
@@ -54,6 +59,38 @@ public class User {
         this.email = email;
     }
 
+    public String getPassword_hash() {
+        return password_hash;
+    }
+
+    public void setPassword_hash(String password_hash) {
+        this.password_hash = password_hash;
+    }
+
+    public String getCreated_by() {
+        return created_by;
+    }
+
+    public void setCreated_by(String created_by) {
+        this.created_by = created_by;
+    }
+
+    public String getCreated_date() {
+        return created_date;
+    }
+
+    public void setCreated_date(String created_date) {
+        this.created_date = created_date;
+    }
+
+    public String getLast_modified_by() {
+        return last_modified_by;
+    }
+
+    public void setLast_modified_by(String last_modified_by) {
+        this.last_modified_by = last_modified_by;
+    }
+
     public boolean isActivated() {
         return activated;
     }
@@ -62,30 +99,20 @@ public class User {
         this.activated = activated;
     }
 
-    public String getLangKey() {
-        return langKey;
-    }
+    public String getLangKey() { return langKey; }
 
-    public void setLangKey(String langKey) {
-        this.langKey = langKey;
-    }
+    public void setLangKey(String langKey) { this.langKey = langKey; }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
+    public String getImageUrl() { return imageUrl; }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
-    public String getResetDate() {
-        return resetDate;
-    }
+    public String getResetDate() { return resetDate; }
 
-    public void setResetDate(String resetDate) {
-        this.resetDate = resetDate;
-    }
+    public void setResetDate(String resetDate) { this.resetDate = resetDate; }
 
-    private String resetDate;
+
+
+
 
 }
