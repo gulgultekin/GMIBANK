@@ -6,6 +6,6 @@ Feature: Customer Api Steps
 
   @ReadCustomers
   Scenario: Read all customers
-    Given user reads all customers info using
+    Given user reads all customers info
     And user saves customer data to correspondent files
     Then user validates all customer data

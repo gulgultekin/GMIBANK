@@ -10,12 +10,8 @@ import cucumber.api.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
-
 import static io.restassured.RestAssured.given;
 
 public class CustomerApiSteps {
@@ -41,27 +37,17 @@ public class CustomerApiSteps {
                 .contentType(ContentType.JSON)
                 .extract()
                 .response();
-        //   response.prettyPrint();
+           response.prettyPrint();
     }
 
-    @Given("user reads all customers info using")
-    public void user_reads_all_customers_info_using() throws Exception {
+    @Given("user reads all customers info")
+    public void user_reads_all_customers_info() throws Exception {
 
         ObjectMapper obj = new ObjectMapper();
-
         customer = obj.readValue(response.asString(), Customer[].class);
 
         for (int i = 0; i < customer.length; i++) {
-            if (customer[i].getUser() != null) {
-                System.out.println(customer[i].getFirstName());
-            }
-        }
-//        System.out.println(customer[0].getSsn());
-//        System.out.println(customer[0].getFirstName());
-
-
-        for (int i = 0; i < customer.length; i++) {
-            System.out.println(customer[i].getSsn());
+            System.out.println(customer[i].getEmail());
         }
 
     }
@@ -69,20 +55,23 @@ public class CustomerApiSteps {
     @Given("user saves customer data to correspondent files")
     public void user_saves_customer_data_to_correspondent_files() {
 
-        //WriteToTxt.saveAllCustomerSSNWithApi(path, customer);
+        WriteToTxt.saveAllCustomerSSNWithApi(path, customer);
+
 
     }
 
     @Then("user validates all customer data")
     public void user_validates_all_customer_data() {
+
         List<String> allCurrentSSNs = new ArrayList<String>();
         allCurrentSSNs.add("108-53-6655");
         allCurrentSSNs.add("224-71-4004");
 
         List<String> customerSSNListWithApi = ReadTxt.returnCustomerSNNList(path);
-
         Assert.assertTrue("The SSNs are not matching", customerSSNListWithApi.containsAll(allCurrentSSNs));
-    }
 
+
+
+    }
 
 }
