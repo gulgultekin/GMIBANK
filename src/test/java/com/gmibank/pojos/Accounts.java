@@ -5,7 +5,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Accounts {
 
-    private String unknown;
+    private String accountType;
+
+    public String getAccountType() { return accountType; }
+
+    public void setAccountType(String accountType) { this.accountType = accountType; }
+
+
 
 
 }

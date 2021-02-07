@@ -14,12 +14,15 @@ public class DatabaseUtility {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+
     public static void createConnection() {
+
         String url = ConfigurationReader.getProperty("database_url");
-        String user = ConfigurationReader.getProperty("database_user");
+        String username = ConfigurationReader.getProperty("database_user");
         String password = "Techpro_@126";
+
         try {
-            connection = DriverManager.getConnection(url, user, password);
+            connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

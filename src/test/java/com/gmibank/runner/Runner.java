@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 
         plugin = {
                 "html:target/default-cucumber-reports",
+                "html:target/cucumber-report.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
 
@@ -17,7 +18,9 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com/gmibank/stepDefinitions",
-        tags = "@StateAPI",
+        tags = "@CountryReader",
+        monochrome = true,
+
         dryRun = false
 
 

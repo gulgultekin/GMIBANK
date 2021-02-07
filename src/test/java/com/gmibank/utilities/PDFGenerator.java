@@ -232,6 +232,20 @@ public class PDFGenerator {
 
     public static void main(String[] args) {
 
+
+       // pdfGenerator("Information","info.pdf");
+
+      //  pdfGeneratorRowsAndCells("Information1","info1.pdf");
+
+
+
+
+
+
+
+
+        /*
+
         List <Customer> list = new ArrayList<>();
         Country country = new Country();
         country.setName("USA");
@@ -248,6 +262,13 @@ public class PDFGenerator {
         String fileName ="applicants.pdf";
 
         pdfGeneratorRowsAndCellsWithList(header,list,fileName);
+
+
+         */
     }
 
-}
+
+
+
+
+    }

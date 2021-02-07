@@ -21,14 +21,11 @@ public class Customer {
     private Country country;
     private String state;
     private User user;
+    private Accounts accounts;
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) { this.id = id; }
 
     public String getFirstName() {
         return firstName;
@@ -158,7 +155,7 @@ public class Customer {
         this.accounts = accounts;
     }
 
-    private Accounts accounts;
+
 
 
 }

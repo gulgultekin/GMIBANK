@@ -59,7 +59,7 @@ public class CommonWebElements {
     public WebElement userManagementButton;
 
     @FindBys({@FindBy(xpath = "//table/tbody/tr")})
-    public List<WebElement> allUsers;
+    public List<WebElement > allUsers;
 
     @FindBy(id="login-item")
     public WebElement signInLink;

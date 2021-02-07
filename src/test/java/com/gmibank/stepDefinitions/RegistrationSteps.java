@@ -11,6 +11,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -82,12 +83,18 @@ public class RegistrationSteps extends PageInitializer {
     @Then("user clicks on register button and sees the success message")
 
     public void user_clicks_on_register_button_and_sees_the_success_message_as() {
-        Driver.waitAndClick(registrationPage.registerButton,5);
+        Driver.waitAndClick(registrationPage.registerButton,2);
 
-        String value =Driver.getDriver().switchTo().alert().getText();
-        Assert.assertEquals(Driver.returnConfigurationReaderValue("successMessageOfRegistration"),value);
+        Driver.waitForVisibility(registrationPage.toastContainer,5);
 
-        //System.out.println(registrationPage.toastContainer.getAttribute("class"));
+        //String value=registrationPage.toastContainer.getText();
+        //System.out.println(value);
+
+        //String value =Driver.getDriver().switchTo().alert().getText();
+
+        Assert.assertTrue(registrationPage.toastContainer.isDisplayed());
+
+       // System.out.println(registrationPage.toastContainer.getAttribute("class"));
         //System.out.println("here it is: "+registrationPage.toastContainer.getAttribute(""));
         }
     }

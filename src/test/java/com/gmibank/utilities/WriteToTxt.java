@@ -1,5 +1,6 @@
 package com.gmibank.utilities;
 
+import com.gmibank.pojos.Country;
 import com.gmibank.pojos.Customer;
 import com.gmibank.pojos.States;
 
@@ -8,6 +9,19 @@ import java.io.FileWriter;
 import java.util.List;
 
 public class WriteToTxt {
+
+    public static void saveAllCustomerSsn(String fileName, Customer[] customers)  {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+            for (int i=0;i<customers.length;i++)
+
+                writer.append(customers[i].getSsn()+",\n");
+
+            writer.close();
+        } catch(Exception e){
+
+        }
+    }
 
     public static void saveDataInFile(String fileName, Customer[] customers)  {
         try {
@@ -106,4 +120,47 @@ public class WriteToTxt {
 
         }
     }
+
+    public static void saveAllCustomerSSNWithApi(String fileName, Customer[] customer) 
+    {
+        
+            try {
+
+                BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+                for (int i = 0; i < customer.length; i++)
+                {
+                    writer.append(customer[i].getSsn()+ ", \n");
+                }
+                writer.close();
+            } 
+          
+          catch (Exception e) {
+
+            }
+        
+
+    }
+
+    public static void saveAllCountries(String fileName, Country[] country)
+    {
+        
+            try {
+
+                BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+                for (int i = 0; i < country.length; i++) 
+                {
+                    writer.append(country[i].getName() + " , " + country[i].getId() + "\n");
+
+                }
+                writer.close();
+            } 
+      
+        catch (Exception e)
+        {
+
+          }
+        
+
+    }
+
 }
