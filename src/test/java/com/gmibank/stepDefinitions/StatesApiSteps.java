@@ -16,7 +16,6 @@ public class StatesApiSteps {
     States[] states;
 
 
-
     @Given("user sets the response using api end point {string} and creates states using {string} and {string}")
     public void user_sets_the_response_using_api_end_point_and_creates_states_using_and(String endPoint, String id, String name) {
 
