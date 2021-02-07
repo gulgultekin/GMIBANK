@@ -47,21 +47,30 @@ public class CustomerAccountStepDef {
 
     @Then("Customer clicks on My Accounts button")
     public void customer_clicks_My_Accounts_button() {
+        Driver.wait(5);
         Driver.waitAndClick(customerAccountsPage.ClickOnMyAccounts, 5);
+        Driver.wait(5);
         Driver.waitAndClick(customerAccountsPage.ClickOnViewTransactionButton1,5);
+        Driver.wait(5);
         Driver.waitAndClick(customerAccountsPage.ClickOnViewTransactionButton2,5);
+        Driver.wait(5);
         Driver.waitAndClick(commonWebElements.profileIcon,5);
         Driver.waitAndClick(commonWebElements.signOutButton,5);
     }
 
     @Then("Customer clicks on Transfer Money and view transaction")
     public void customer_clicks_Transfer_Money_and_view_transaction() {
-
+        Driver.wait(5);
         Driver.waitAndClick(transferMoneyPage.ClickOnTransferMoney,5);
+        Driver.wait(5);
         Driver.waitAndSendText(transferMoneyPage.FromTextBox,ConfigurationReader.getProperty("fromSavingAccount"),5);
+        Driver.wait(5);
         Driver.waitAndSendText(transferMoneyPage.ToTextBox,ConfigurationReader.getProperty("toCheckingAccount"),5);
+        Driver.wait(5);
         Driver.waitAndSendText(transferMoneyPage.BalanceTextBox,ConfigurationReader.getProperty("customerBalance"),5);
+        Driver.wait(5);
         Driver.waitAndSendText(transferMoneyPage.DescriptionTextBox,ConfigurationReader.getProperty("customerDescription"),5);
+        Driver.wait(5);
         Driver.waitAndClick(transferMoneyPage.ClickOnMakeTransferButton,5);
 
 
