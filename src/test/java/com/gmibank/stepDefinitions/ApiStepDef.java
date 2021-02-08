@@ -16,41 +16,41 @@ import java.io.IOException;
 
 public class ApiStepDef
 {
-    Response response;
-    Customer[] customer;
-    @Given("user go to api end point {string}")
-    public void user_go_to_api_end_point(String api_end_point) {
-        response=given().headers(
-                "Authorization",
-                "Bearer "+ConfigurationReader.getProperty("api_bearer_token"),
-                "Content_Type",ContentType.JSON,
-                "Accept",ContentType.JSON)
-                .when()
-                .get(api_end_point)
-                .then()
-                .contentType(ContentType.JSON)
-                .extract()
-                .response();
-        response.prettyPrint();
+ Response response;
+ Customer[] customer;
+ @Given("user go to api end point {string}")
+ public void user_go_to_api_end_point(String api_end_point) {
+  response=given().headers(
+          "Authorization",
+          "Bearer "+ConfigurationReader.getProperty("api_bearer_token"),
+          "Content_Type",ContentType.JSON,
+          "Accept",ContentType.JSON)
+          .when()
+          .get(api_end_point)
+          .then()
+          .contentType(ContentType.JSON)
+          .extract()
+          .response();
+  response.prettyPrint();
 
-    }
-    @Given("read all customer and sets response")
-    public void read_all_customer_and_sets_creat_pojo_class() throws IOException {
+ }
+ @Given("read all customer and sets response")
+ public void read_all_customer_and_sets_creat_pojo_class() throws IOException {
 
-        ObjectMapper objectMapper=new ObjectMapper();
-        customer=objectMapper.readValue(response.asString(),Customer[].class);
-        for (int i=0; i<customer.length;i++){
-            //System.out.println(customer[i].getSsn());
-        }
-        System.out.println("*********************************");
-        for(int i=0; i<customer.length;i++) {
-            if (customer[i].getUser() != null) {
-                //            System.out.println(customer[i].getUser().getId());
-            }
-        }
-    }
-    @Then("Validate data")
-    public void validate_data() {
-        WriteToTxt.saveAllCustomerSsn("allCustomerSSN.txt",customer);
-    }
+  ObjectMapper objectMapper=new ObjectMapper();
+  customer=objectMapper.readValue(response.asString(),Customer[].class);
+  for (int i=0; i<customer.length;i++){
+   //System.out.println(customer[i].getSsn());
+  }
+  System.out.println("*********************************");
+  for(int i=0; i<customer.length;i++) {
+   if (customer[i].getUser() != null) {
+    //            System.out.println(customer[i].getUser().getId());
+   }
+  }
+ }
+ @Then("Validate data")
+ public void validate_data() {
+  WriteToTxt.saveAllCustomerSsn("allCustomerSSN.txt",customer);
+ }
 }

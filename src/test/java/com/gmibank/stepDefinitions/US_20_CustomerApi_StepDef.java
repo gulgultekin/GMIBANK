@@ -23,24 +23,24 @@ public class US_20_CustomerApi_StepDef {
     Customer[] customer;
     List<String> stringlist= new ArrayList<>();
 
-    @Given("user go to api end point {string}")
-    public void user_go_to_api_end_point(String api_end_point) {
-
-        response = given().headers(
-                        "Authorization",
-                        "Bearer " + ConfigurationReader.getProperty("api_bearer_token"),
-                        "Content_Type", ContentType.JSON,
-                         "Accept", ContentType.JSON)
-                .when()
-                        .get(api_end_point)
-                .then()
-                        .contentType(ContentType.JSON)
-                         .statusCode(200)
-                        .extract()
-                        .response();
-        response.prettyPrint();
-
-    }
+//    @Given("user go to api end point {string}")
+//    public void user_go_to_api_end_point(String api_end_point) {
+//
+//        response = given().headers(
+//                        "Authorization",
+//                        "Bearer " + ConfigurationReader.getProperty("api_bearer_token"),
+//                        "Content_Type", ContentType.JSON,
+//                         "Accept", ContentType.JSON)
+//                .when()
+//                        .get(api_end_point)
+//                .then()
+//                        .contentType(ContentType.JSON)
+//                         .statusCode(200)
+//                        .extract()
+//                        .response();
+//        response.prettyPrint();
+//
+//    }
 
     @Given("read all customer and create pojo class")
     public void read_all_customer_and_create_pojo_class() throws IOException {
@@ -67,22 +67,22 @@ public class US_20_CustomerApi_StepDef {
         }
     }
 
-    @Then("user validates all customer data")
-    public void user_validates_all_customer_data() {
-
-        List<String> createcustomerSSn = new ArrayList<>();
-
-        createcustomerSSn.add("186-48-4946");
-        createcustomerSSn.add("234-55-8998");
-        createcustomerSSn.add("511-18-8543");
-        createcustomerSSn.add("333-34-2395");
-
-        Assert.assertTrue("This SSN not found",stringlist.containsAll(createcustomerSSn));
-
-       // Assert.assertTrue("This SSN not found",response.getBody().asString().contains("170-22-3594"));
-
-
-
-    }
+//    @Then("user validates all customer data")
+//    public void user_validates_all_customer_data() {
+//
+//        List<String> createcustomerSSn = new ArrayList<>();
+//
+//        createcustomerSSn.add("186-48-4946");
+//        createcustomerSSn.add("234-55-8998");
+//        createcustomerSSn.add("511-18-8543");
+//        createcustomerSSn.add("333-34-2395");
+//
+//        Assert.assertTrue("This SSN not found",stringlist.containsAll(createcustomerSSn));
+//
+//       // Assert.assertTrue("This SSN not found",response.getBody().asString().contains("170-22-3594"));
+//
+//
+//
+//    }
 
 }
