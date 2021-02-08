@@ -93,18 +93,7 @@ public class WriteToTxt {
 
         }
     }
-    public static void saveAllStatesBenim(String fileName, List<Object> list)  {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
-            for (int i=0; i< list.size(); i++)
-                writer.append(list.get(i)+"\n");
-
-            writer.close();
-        } catch(Exception e){
-
-        }
-    }
 
 
 
@@ -121,45 +110,45 @@ public class WriteToTxt {
         }
     }
 
-    public static void saveAllCustomerSSNWithApi(String fileName, Customer[] customer) 
+    public static void saveAllCustomerSSNWithApi(String fileName, Customer[] customer)
     {
-        
-            try {
 
-                BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-                for (int i = 0; i < customer.length; i++)
-                {
-                    writer.append(customer[i].getSsn()+ ", \n");
-                }
-                writer.close();
-            } 
-          
-          catch (Exception e) {
+        try {
 
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+            for (int i = 0; i < customer.length; i++)
+            {
+                writer.append(customer[i].getSsn()+ ", \n");
             }
-        
+            writer.close();
+        }
+
+        catch (Exception e) {
+
+        }
+
 
     }
 
     public static void saveAllCountries(String fileName, Country[] country)
     {
-        
-            try {
 
-                BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-                for (int i = 0; i < country.length; i++) 
-                {
-                    writer.append(country[i].getName() + " , " + country[i].getId() + "\n");
+        try {
 
-                }
-                writer.close();
-            } 
-      
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+            for (int i = 0; i < country.length; i++)
+            {
+                writer.append(country[i].getName() + " , " + country[i].getId() + "\n");
+
+            }
+            writer.close();
+        }
+
         catch (Exception e)
         {
 
-          }
-        
+        }
+
 
     }
 

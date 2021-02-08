@@ -19,8 +19,16 @@ Feature:Database Testing
 
     Examples:
       | query                     | columnName |
-      | Select * from tp_country; | id      |
-#    country table dan ulke id lerini al
+      | Select * from tp_country; | id         |
+
+  Scenario Outline: Check all USA state data
+    Given user provides the query "<query>" and "<columnName>" and gets column data
+    Then user validates all usa state data
+
+    Examples:
+      | query                   | columnName |
+      | Select * from tp_state; | id         |
+
 
 #  Scenario Outline: Check all USA state data
 #    Given user provides the query "<query>" and "<columnName>" and gets column data
@@ -29,5 +37,8 @@ Feature:Database Testing
 #    Examples:
 #      | query                     | columnName |
 #      | Select * from tp_state; | tpcountry_id      |
-#    state tablosundan butun country id lerini topla sonra USA id exist mi?
+
+
+
+
 

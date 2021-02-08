@@ -35,6 +35,8 @@ public class ReadTxt {
         return all;
     }
 
+
+
     public static List<Customer> returnCustomerSNN(String filePath){
         List<Customer>all = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -182,9 +184,6 @@ public class ReadTxt {
         return all;
     }
 
-
-
-
     public static List<Country> returnAllCountries1(String filePath){
         List<Country>allCountries = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -235,5 +234,8 @@ public class ReadTxt {
         }
         return all;
     }
+
+
+
 
 }

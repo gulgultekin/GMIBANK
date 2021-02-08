@@ -15,6 +15,7 @@ import com.gmibank.pojos.Customer;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class PDFGenerator {
 
@@ -169,7 +170,7 @@ public class PDFGenerator {
         Document document = new Document();
         String pdf_path = fileName;
         String pdf_title = header;
-        String logo_path = "/Users/ibrahimkalin/Downloads/Techproed.jpg";
+        String logo_path = "src/test/resources/test_data/teamlogo.png";
         List<String> headers = new ArrayList<String>();
         headers.add("Applicants");
         headers.add("SSNs");
@@ -230,21 +231,59 @@ public class PDFGenerator {
 
     }
 
+    public static void pdfGeneratorRowsAndCellsAllUserList(String header, List <Map<String, Object>> list, List<String>ssnList, String fileName){
+
+        Document document = new Document();
+        String pdf_path = fileName;
+        String pdf_title = header;
+        String logo_path = "src/test/resources/test_data/teamlogo.png";
+        List<String> headers = new ArrayList<String>();
+        headers.add("First Name");
+        headers.add("Last Name");
+        headers.add("Role");
+
+        try{
+
+            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(pdf_path));
+            document.open();
+            document.add(new Paragraph("                                     "+pdf_title));
+
+            PdfPTable table = new PdfPTable(3);
+            table.setWidthPercentage(110);
+            table.setSpacingBefore(25);
+            table.setSpacingAfter(25);
+            float [] colWidth = {2,2,2};
+            table.setWidths(colWidth);
+
+            for(int i=0;i<headers.size();i++) {
+                PdfPCell cell1 = new PdfPCell(new Phrase(headers.get(i)));
+                table.addCell(cell1);
+            }
+            table.setHeaderRows(ssnList.size());
+
+            for(int i=0;i<list.size();i++ ) {
+                for (int j = 0; j < ssnList.size(); j++) {
+                    if(ssnList.get(j).equals(list.get(i).get("ssn").toString())){
+                        table.addCell(list.get(i).get("first_name").toString());
+                        table.addCell(list.get(i).get("last_name").toString());
+                        table.addCell(list.get(i).get("authority_name").toString());
+                    }
+                }
+            }
+            document.add(table);
+            document.add(Image.getInstance(logo_path));
+            document.close();
+
+            writer.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
 
 
-       // pdfGenerator("Information","info.pdf");
-
-      //  pdfGeneratorRowsAndCells("Information1","info1.pdf");
-
-
-
-
-
-
-
-
-        /*
 
         List <Customer> list = new ArrayList<>();
         Country country = new Country();
@@ -262,13 +301,6 @@ public class PDFGenerator {
         String fileName ="applicants.pdf";
 
         pdfGeneratorRowsAndCellsWithList(header,list,fileName);
-
-
-         */
     }
 
-
-
-
-
-    }
+}

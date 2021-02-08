@@ -52,6 +52,9 @@ public class StateApiStepDef {
 
     @Given("user saves the states to correspondent files")
     public void user_saves_the_states_to_correspondent_files() throws IOException {
+
+        System.out.println("test "+response);
+
         ObjectMapper objectMapper=new ObjectMapper();
         state=objectMapper.readValue(response.asString(),States[].class);
 

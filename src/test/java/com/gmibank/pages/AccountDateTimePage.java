@@ -38,6 +38,7 @@ public class AccountDateTimePage extends CommonWebElements {
         String date = lastItem.findElement(By.xpath("./../td[6]")).getText();
 
         date = convertDate(date);
+//        System.out.println(date+" date " +actualDateTime);
         if (date.equals(actualDateTime)) {
             dateCorrect = true;
         }

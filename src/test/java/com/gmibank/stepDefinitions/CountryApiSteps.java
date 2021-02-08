@@ -53,7 +53,7 @@ public class CountryApiSteps {
                 .contentType(ContentType.JSON)
                 .extract()
                 .response();
-         response.prettyPrint();
+        response.prettyPrint();
     }
 
     @Given("user saves the countries to corresponding files")

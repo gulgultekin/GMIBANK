@@ -21,6 +21,7 @@ public class DatabaseStepDef {
     @Given("user provides the query {string} and {string} and gets column data")
     public void user_provides_the_query_and_and_gets_column_data(String query, String columnName) {
         listOfRecords=DatabaseUtility.getColumnData(query,columnName);
+
     }
 
     @Then("user validates all user data")
@@ -32,6 +33,7 @@ public class DatabaseStepDef {
         userSSNs.add("234-56-4567"); // admin
 
         Assert.assertTrue(listOfRecords.containsAll(userSSNs));
+
     }
 
     @Then("user validates country data")
@@ -50,6 +52,21 @@ public class DatabaseStepDef {
         Assert.assertTrue(dbRecordsString.containsAll(userCountry));
     }
 
+
+    @Then("user validates all usa state data")
+    public void user_validates_all_usa_state_data() {
+        List<String> newCustmrStateID=new ArrayList<>();
+        newCustmrStateID.add("73155");
+        newCustmrStateID.add("72788");
+        for (int i = 0; i < listOfRecords.size(); i++) {
+            if(listOfRecords.get(i)!=null) {
+                dbRecordsString.add(listOfRecords.get(i).toString().trim());
+            }
+        }
+        Assert.assertTrue(dbRecordsString.containsAll(newCustmrStateID));
+
+    }
+
 //    @Then("user validates all usa state data")
 //    public void user_validates_all_usa_state_data() {
 //        List<String> stateCountry=new ArrayList<>();
@@ -64,6 +81,6 @@ public class DatabaseStepDef {
 
 //        dbRecordsString=>stateler burda
 
-   // }
+// }
 
 }
